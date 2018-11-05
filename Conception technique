@@ -1,0 +1,22 @@
+Dossier de conception de technique
+
+Ce document présente en détails vos choix en matière de technologies qui constitueront la plateforme Alumnis (langage, frameworks, etc). Vous êtes libres du niveau de détails de cette proposition, en gardant à l'esprit que vos choix doivent être argumentés.
+Quels engagements prenez-vous concernant la qualité, l'éco-conception, la performance, l'accessibilité et la sécurité?
+
+
+
+Langages utilisés : Node JS, javascript.
+	Le but sera ici d'avoir une interface rapide grace au moteur V8 de nodeJS, c'est un outil open source créé par Google qui analyse et exécute du code JavaScript très rapidement.
+
+Frameworks : Pas de framework javascript seulement bootstrap pour le coté responsive design.
+	Travailler avec des modules sera largement suffisant. Le but est de ne pas ralentir les performances. 
+
+Base de donnée : MySQL.
+
+Modules : express, helmet, express-session, cookie-session.
+ces modules permettront de garder notre application sécuriser, elles sont le minimum vitale.
+
+
+
+Nous nous engageons a vous livrer une application web performante grace a nodeJS tout en maintenant l'accessibilité au plus haut grace a lighthouse.
+L'eco-conception quant a elle sera verifiée sur http://www.ecometer.org/ et sera excellent car encore une fois le outils utilisés restent légers et performants. L'application sera également vérifier sur https://detectify.com/ afin de la garder sécurisée au maximum. Evidemment le site sera réaliser celon les chartes d'opquast.
