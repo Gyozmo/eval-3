@@ -9,14 +9,22 @@ app.get('/', function (req, res) {
   res.render('index.pug', {title: 'Hey', message:'my pug'})
 })
 
-app.get('Profil', function(req,res){
+app.get('/profile', function(req,res){
   res.render('profil.pug')
+})
+
+app.get('/contactes', function(req,res){
+  res.render('contactes.pug')
+})
+
+app.get('/mateprofile', function(req,res){
+  res.render('mateprofile.pug')
 })
  
 
 
 //SQL PART
-var connection = require('./env.js').connection
+var connection = require('./env2').connection
 
 connection.connect(function(err) {
   if (err) {
