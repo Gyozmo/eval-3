@@ -3,10 +3,19 @@ var app = express()
 
 app.set('view engine', 'pug')
  
+
+//Routing
 app.get('/', function (req, res) {
   res.render('index.pug', {title: 'Hey', message:'my pug'})
 })
+
+app.get('Profil', function(req,res){
+  res.render('profil.pug')
+})
  
+
+
+//SQL PART
 var connection = require('./env.js').connection
 
 connection.connect(function(err) {
@@ -14,7 +23,6 @@ connection.connect(function(err) {
     console.error('error connecting: ' + err.stack);
     return;
   }
- 
   console.log('connected as id ' + connection.threadId);
 });
 
