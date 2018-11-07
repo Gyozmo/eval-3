@@ -21,11 +21,17 @@ app.get('/', function (req, res) {
     res.render('index.pug', {title: 'Alumnis', message: `hey ${results[0].username} Bienvenue dans la page d'accueil alumnis Simplon`});
     console.log(results[0])
   });
-  
-
 })
 
-
+app.get('/social', function(req,res){
+  connection.query(`select * from event`, function(error,results){
+    res.render('social.pug', {
+      events: results
+    })
+    // console.log(results[1].title)
+  })
+  
+  })
 
 
 app.get('/profile', function(req,res){
@@ -39,7 +45,8 @@ app.get('/contactes', function(req,res){
 app.get('/mateprofile', function(req,res){
   res.render('mateprofile.pug')
 })
- 
+
+
 
 
 

@@ -1,0 +1,18 @@
+include layouts/head.pug
+include layouts/navbar.pug
+
+h1(class="text-center mt-5") Page évenements
+
+each val,index in events
+
+    
+        .card.mx-auto.mt-5(style= "width: 45rem;")
+          .card-body
+            h1.card-title 
+                = val.title
+            p(class="card-text") 
+                = val.content
+            a(class="btn-lg btn-primary" href="") ...
+
+
+include layouts/footer.pug
